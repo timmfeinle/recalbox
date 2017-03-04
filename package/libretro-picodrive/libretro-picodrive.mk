@@ -12,6 +12,7 @@ define LIBRETRO_PICODRIVE_CONFIGURE_CMDS
 	git -C $(@D) clone https://github.com/libretro/picodrive
 	#git -C $(@D) checkout $(LIBRETRO_PICODRIVE_VERSION)
 	#cp -r $(@D)/../picodrivegithub/.git $(@D)/
+	sed -i "s|git://notaz.gp2x.de/~notaz|https://github.com/notaz|" $(@D)/picodrive/.gitmodules
 	git -C $(@D)/picodrive submodule update --init
 	##( cd $(@D)/picodrive && \
         ##CC="$(TARGET_CC)" CXX="$(TARGET_CXX)" CFLAGS="$(TARGET_CFLAGS)" \
