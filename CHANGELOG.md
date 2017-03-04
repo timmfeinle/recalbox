@@ -2,7 +2,14 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [4.0.1] - 2017-01-15
+## [4.0.3] - 2017-03-04
+- Added support for raspberry pi zero W
+- add a workaround when iocharset=utf8 fails the mount when updating
+
+## [4.0.2] - 2017-02-10
+- Fixed nes and other platforms black screen 
+
+## [4.0.1] - 2017-01-28
 - Fixed upgrade process
 - Fixes nes 30 controller default layout
 - Added support for rpi2v1.2
