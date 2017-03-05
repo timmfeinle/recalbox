@@ -20,7 +20,10 @@ echo -e "\n----- Copying root archive -----\n"
 cp "${BINARIES_DIR}/rootfs.tar.xz" "${RECALBOX_BINARIES_DIR}/root.tar.xz"
 
 echo -e "\n----- Creating boot archive -----\n"
-cp -f "${BINARIES_DIR}/"*.dtb "${BINARIES_DIR}/rpi-firmware"
+lines=$(find ${BINARIES_DIR} -maxdepth 1 -name "*.dtb" | wc -l )
+if [ $lines -gt 0 ];then
+  cp -f "${BINARIES_DIR}/"*.dtb "${BINARIES_DIR}/rpi-firmware"
+fi
 "${HOST_DIR}/usr/bin/mkknlimg" "${BINARIES_DIR}/zImage" "${BINARIES_DIR}/rpi-firmware/zImage"
 tar -cvJf "${RECALBOX_BINARIES_DIR}/boot.tar.xz" -C "${BINARIES_DIR}/rpi-firmware" "." ||
     { echo "ERROR : unable to create boot.tar.xz" && exit 1 ;}
