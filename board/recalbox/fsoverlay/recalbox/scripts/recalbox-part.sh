@@ -33,7 +33,7 @@ determine_system_part() {
             value=`echo $root |cut -d '=' -f 2`
             blkid | grep "$property=\"$value\""| cut -d ':' -f 1
             return 0
-        return 0
+        fi
     elif [ ! -z "$label" ] ; then
         blkid | grep "LABEL=\"$label\"" | cut -d ':' -f 1
         return 0
