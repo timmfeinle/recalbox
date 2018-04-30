@@ -32,8 +32,8 @@ variables:
       - updates/dist/v1/upgrade/${ARCH}
       - build.log
     expire_in: 2 mos
-      script:
-        - cd buildroot && git reset HEAD --hard && git clean -dfx
+    script:
+      - cd buildroot && git reset HEAD --hard && git clean -dfx
 
 build rpi1:
   <<: *build_definition
