@@ -25,6 +25,8 @@ variables:
     - rm -rf output/
     - echo "${RECALBOX_VERSION}" >> "${DIST_DIR}/recalbox.version"
     - cp CHANGELOG.md "${DIST_DIR}/recalbox.changelog"
+  after-script:
+    - cd buildroot && git reset HEAD --hard && git clean -dfx
   artifacts:
     name: dist-${ARCH}-${CI_BUILD_ID}
     when: always
@@ -32,8 +34,6 @@ variables:
       - updates/dist/v1/upgrade/${ARCH}
       - build.log
     expire_in: 2 mos
-    script:
-      - cd buildroot && git reset HEAD --hard && git clean -dfx
 
 build rpi1:
   <<: *build_definition
