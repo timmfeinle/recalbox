@@ -25,7 +25,7 @@ variables:
     - rm -rf output/
     - echo "${RECALBOX_VERSION}" >> "${DIST_DIR}/recalbox.version"
     - cp CHANGELOG.md "${DIST_DIR}/recalbox.changelog"
-  after-script:
+  after_script:
     - cd buildroot && git reset HEAD --hard && git clean -dfx
   artifacts:
     name: dist-${ARCH}-${CI_BUILD_ID}
