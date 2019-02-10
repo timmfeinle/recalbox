@@ -1,6 +1,6 @@
 # Release notes
 
-## Work in Progress - Unreleased
+## Work in Progress - Unreleased - February 2019 beta
 
 ## News
 - Raspberry Pi3b+ & CM3 compatibility
