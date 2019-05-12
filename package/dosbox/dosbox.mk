@@ -10,6 +10,12 @@ DOSBOX_SITE_METHOD = git
 DOSBOX_LICENSE = GPL2
 DOSBOX_LICENSE_FILES = COPYING
 DOSBOX_DEPENDENCIES = sdl2 zlib libpng libogg libvorbis sdl_sound sdl2_net
+DOSBOX_AUTORECONF = YES
+DOSBOX_AUTORECONF_OPTS = -i
+DOSBOX_CONF_OPTS += --host="$(GNU_TARGET_NAME)" --enable-core-inline --prefix=/usr \
+					--enable-dynrec --enable-unaligned_memory --disable-opengl \
+					--with-sdl=sdl2 --with-sdl-prefix="$(STAGING_DIR)/usr"
+DOSBOX_CONF_OPTS += LIBS="-lvorbisfile -lvorbis -logg"
 
 # Use best architecture for ARM boards
 # RPI1: armv6l
