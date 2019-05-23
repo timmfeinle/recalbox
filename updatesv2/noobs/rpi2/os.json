@@ -1,12 +1,18 @@
 {
-  "name": "recalboxOS-rpi2",
-  "version": "v4.1.0",
-  "release_date": "2017-09-24",
-  "kernel": "4.4",
-  "description": "The recalbox operating system for rpi2.",
-  "url": "http://www.recalbox.com/",
-  "supported_hex_revisions": "1040,1041",
-  "supported_models": [
-    "Pi 2"
-   ]
+    "name": "recalboxOS-rpi2",
+    "version": "6.0.0",
+    "release_date": "2019-04-12",
+    "description": "Recalbox, the open source retro gaming console",
+    "url": "https://www.recalbox.com/",
+    "group": "Games",
+    "username": "root",
+    "password": "recalboxroot",
+    "supports_usb_boot": true,
+    "supports_usb_root": true,
+    "supports_backup": true,
+    "download_size": 280869964,
+    "supported_hex_revisions": "1040,1041",
+    "supported_models": [
+        "Pi 2"
+    ]
 }

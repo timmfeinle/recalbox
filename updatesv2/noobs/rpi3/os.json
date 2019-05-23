@@ -1,12 +1,20 @@
 {
-  "name": "recalboxOS-rpi3",
-  "version": "v4.1.0",
-  "release_date": "2017-09-24",
-  "kernel": "4.4",
-  "description": "The recalbox operating system for rpi3.",
-  "url": "http://www.recalbox.com/",
-  "supported_hex_revisions": "2082",
-  "supported_models": [
-    "Pi 3"
-   ]
+    "name": "recalboxOS-rpi3",
+    "version": "6.0.0",
+    "release_date": "2019-04-12",
+    "description": "Recalbox, the open source retro gaming console",
+    "url": "https://www.recalbox.com/",
+    "group": "Games",
+    "username": "root",
+    "password": "recalboxroot",
+    "supports_usb_boot": true,
+    "supports_usb_root": true,
+    "supports_backup": true,
+    "download_size": 0000,
+    "supported_hex_revisions": "2082,20d3,20e0",
+    "supported_models": [
+        "Pi Compute Module 3",
+        "Pi 3 Model B Rev",
+        "Pi 3 Model B Plus Rev"
+    ]
 }

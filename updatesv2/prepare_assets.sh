@@ -1,8 +1,8 @@
 #!/bin/sh
 set -eu
 
-if [ -z "${1}" -o -z "${2}" -o -z "${3}" -o -z "${4}" -o -z "${5}" ]; then
-  echo "This script need 5 parameters"
+if [ -z "${1}" -o -z "${2}" -o -z "${3}" -o -z "${4}" -o -z "${5}" -o -z "${6}" ]; then
+  echo "This script need 6 parameters"
   exit 1
 fi
 
@@ -11,6 +11,7 @@ IMAGE_DIR="${2}"
 RELEASE_DIR="${3}"
 NETLIFY_DIR="${4}"
 SKIP_IMAGES="${5}"
+BUILD_TAG="${6}"
 
 RELEASE_DIR_UPGRADE="${RELEASE_DIR}/v2/upgrade"
 rm -rf "${RELEASE_DIR}"
@@ -42,7 +43,16 @@ if [ "${RELEASE_TYPE}" == "prod" ]; then
       cp "${UPGRADE_DIR}/${arch}/${file}" "${NOOBS_DIR}/${arch}/${file}"
     done
   done
+  # Compute file size
+  for arch in $(ls "${NOOBS_DIR}" | grep rpi); do
+    echo "Computing file size for arch ${arch}"
+    size = `find "${NOOBS_DIR}/${arch}" -name '*.tar.xz' -exec wc -c {} + | tail -n 1 | cut -d' ' -f 1`
+    sed -i "s|\"download_size\":.*|\"download_size\": ${size},|g" "${NOOBS_DIR}/${arch}/os.json"
+    sed -i "s|\"version\":.*|\"version\": ${BUILD_TAG},|g" "${NOOBS_DIR}/${arch}/os.json"
+  done
+  sed -i "s|\"version\":.*|\"version\": ${BUILD_TAG},|g" "${NOOBS_DIR}/os_list_v3.json"
 fi
+
 # Template html
 cp "${RELEASE_TYPE}.template.html" "${RELEASE_DIR}/index.html"
 
