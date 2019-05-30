@@ -1,3 +1,9 @@
+# This is the list of patches to apply to the Buildroot external tree
+# First column is either:
+#   * a MD5 sum of the file to patch (i.e. the target file)
+#   * a line of minus signs ('-') indicates a file that we remove from Buildroot external tree
+#   * a line of plus signs ('+') indicates a file that we add to the Buildroot external tree
+
 7c8ea4b06f21918aeb84cd083b266b8c  package/binutils/binutils.mk
 --------------------------------  package/bluez5_utils/0002-bt_shell-APIs-shall-only-be-build-if-readline-is-pre.patch
 19140a13d0e2ab4a203801ada1d4120e  package/bluez5_utils/bluez5_utils.hash
