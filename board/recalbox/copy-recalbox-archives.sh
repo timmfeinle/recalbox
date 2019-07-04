@@ -54,7 +54,7 @@ fi
 
 mkdir -p "${RECALBOX_BINARIES_DIR}"
 
-# XU4, RPI0, RPI1, RPI2 or RPI3
+# XU4, RPI0, RPI1, RPI2, RPI3 or RPI4
 RECALBOX_TARGET=$(grep -E "^BR2_PACKAGE_RECALBOX_TARGET_[A-Z_0-9]*=y$" "${BR2_CONFIG}" | sed -e s+'^BR2_PACKAGE_RECALBOX_TARGET_\([A-Z_0-9]*\)=y$'+'\1'+)
 
 RECALBOX_TARGET_LOWER=$(echo ${RECALBOX_TARGET} | tr '[:upper:]' '[:lower:]')
@@ -64,7 +64,7 @@ RECALBOX_IMG="${RECALBOX_BINARIES_DIR}/recalbox-${RECALBOX_TARGET_LOWER}.img"
 echo -e "\n----- Generating images/recalbox files -----\n"
 
 case "${RECALBOX_TARGET}" in
-    RPI0|RPI1|RPI2|RPI3)
+    RPI0|RPI1|RPI2|RPI3|RPI4)
         # root.tar.xz
         cp "${BINARIES_DIR}/rootfs.tar.xz" "${RECALBOX_BINARIES_DIR}/root.tar.xz" || exit 1
 
