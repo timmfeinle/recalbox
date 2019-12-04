@@ -94,7 +94,7 @@ endif
 
 ifeq ($(BR2_PACKAGE_HAS_LIBGLES),y)
     ifeq ($(BR2_i386)$(BR2_x86_64),y)
-    RETROARCH_CONF_OPTS += --enable-opengl --enable-opengl1
+    RETROARCH_CONF_OPTS += --disable-opengles --enable-opengl --enable-opengl1
     RETROARCH_DEPENDENCIES += libgl
     else
     RETROARCH_CONF_OPTS += --enable-opengles
