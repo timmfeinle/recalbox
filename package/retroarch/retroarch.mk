@@ -92,12 +92,6 @@ else
 RETROARCH_CONF_OPTS += --disable-opengles
 endif
 
-ifeq ($(BR2_PACKAGE_LIBDRM),y)
-RETROARCH_CONF_OPTS += --enable-kms
-else
-RETROARCH_CONF_OPTS += --disable-dkms
-endif
-
 ifeq ($(BR2_PACKAGE_HAS_LIBOPENVG),y)
 RETROARCH_DEPENDENCIES += libopenvg
 endif
