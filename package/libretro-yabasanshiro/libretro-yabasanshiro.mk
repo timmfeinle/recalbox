@@ -5,7 +5,7 @@
 ################################################################################
 
 # https://github.com/libretro/yabause/tree/yabasanshiro/yabause/src/libretro
-LIBRETRO_YABASANSHIRO_VERSION = 8d0dbe3150e0b72906753262bc0bb8a2e26f8e98
+LIBRETRO_YABASANSHIRO_VERSION = 8406a5c11d7b6186a44c7fe48f493e6de5f8cb18
 LIBRETRO_YABASANSHIRO_SITE = $(call github,libretro,yabause,$(LIBRETRO_YABASANSHIRO_VERSION))
 
 LIBRETRO_YABASANSHIRO_PLATFORM = $(RETROARCH_LIBRETRO_PLATFORM)

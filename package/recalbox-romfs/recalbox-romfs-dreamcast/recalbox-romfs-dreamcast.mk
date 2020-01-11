@@ -5,7 +5,7 @@
 ################################################################################
 
 # Package generated with :
-# ./scripts/linux/empack.py --system dreamcast --extension '.gdi .GDI .cdi .CDI .chd .CHD' --fullname 'Sega Dreamcast' --platform dreamcast --theme dreamcast libretro:flycast:BR2_PACKAGE_LIBRETRO_FLYCAST reicast:reicast:BR2_PACKAGE_REICAST reicast:reicast:BR2_PACKAGE_REICAST_OLD
+# ./scripts/linux/empack.py --system dreamcast --extension '.gdi .GDI .cdi .CDI .chd .CHD .cue .CUE .m3u .M3U' --fullname 'Sega Dreamcast' --platform dreamcast --theme dreamcast libretro:flycast:BR2_PACKAGE_LIBRETRO_FLYCAST reicast:reicast:BR2_PACKAGE_REICAST reicast:reicast:BR2_PACKAGE_REICAST_OLD
 
 #
 # DO NOT CALL empack.py to regenerate this file! It cannot handle both REICAST package!
@@ -27,7 +27,7 @@ SOURCE_ROMDIR_DREAMCAST = $(RECALBOX_ROMFS_DREAMCAST_PKGDIR)/roms
 
 ifneq ($(BR2_PACKAGE_LIBRETRO_FLYCAST)$(BR2_PACKAGE_REICAST)$(BR2_PACKAGE_REICAST_OLD),)
 define CONFIGURE_MAIN_DREAMCAST_START
-	$(call RECALBOX_ROMFS_CALL_ADD_SYSTEM,$(SYSTEM_XML_DREAMCAST),Sega Dreamcast,$(SYSTEM_NAME_DREAMCAST),.gdi .GDI .cdi .CDI .chd .CHD,dreamcast,dreamcast)
+	$(call RECALBOX_ROMFS_CALL_ADD_SYSTEM,$(SYSTEM_XML_DREAMCAST),Sega Dreamcast,$(SYSTEM_NAME_DREAMCAST),.gdi .GDI .cdi .CDI .chd .CHD .cue .CUE .m3u .M3U,dreamcast,dreamcast)
 endef
 
 ifneq ($(BR2_PACKAGE_REICAST)$(BR2_PACKAGE_REICAST_OLD),)
