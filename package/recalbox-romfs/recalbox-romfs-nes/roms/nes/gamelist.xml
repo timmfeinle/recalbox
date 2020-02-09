@@ -1,6 +1,29 @@
 <?xml version="1.0"?>
 <gameList>
-	  <game>
+  <game id="199992" source="ScreenScraper.fr">
+    <path>./Nova The Squirrel.nes</path>
+    <name>Nova The Squirrel</name>
+    <desc>Explore 33 levels and fight 7 bosses across five different worlds in an attempt to save the world of Latte from the evil "Scheme Team".
+Copy the abilities of your enemies. (10 in all!)
+Over 35 different types of enemies, plus variants.
+Interesting puzzle mechanics.
+Fancy soundtrack full of effects, by Vuurniac Squarewave.
+Composer's Bandcamp, YouTube
+Squirrel Domino music by maple
+Modern design: no lives or time limits, tons of checkpoints.
+A collectible in every stage for those wanting a challenge.
+Bonus challenge levels after the main game.
+Bonus game: Double Action Blaster Guys.</desc>
+    <rating>0.7</rating>
+    <releasedate>20190830T000000</releasedate>
+    <developer>NovaSquirrel</developer>
+    <publisher>NovaSquirrel</publisher>
+    <genre>Plateform / Run Jump</genre>
+    <players>1</players>
+    <hash>0B752BEE</hash>
+    <image>./media/images/Nova The Squirrel.png</image>
+  </game>
+  <game>
     <path>./Underground Adventure (Arcade) [NESMaker].nes</path>
     <name>Underground Adventure</name>
     <desc>Follow Harry & Jack's adventures in mysterious caves. Collect all gems to complete levels. Escapes monsters and complete all levels to reach the final exit!</desc>
