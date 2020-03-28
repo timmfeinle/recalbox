@@ -1,13 +1,11 @@
-diff --git a/package/boost/boost.mk b/package/boost/boost.mk
-index 9ad83d5aeb..ddb7800c74 100644
---- a/package/boost/boost.mk
-+++ b/package/boost/boost.mk
-@@ -11,6 +11,8 @@ BOOST_INSTALL_STAGING = YES
- BOOST_LICENSE = BSL-1.0
- BOOST_LICENSE_FILES = LICENSE_1_0.txt
+--- buildroot/package/boost/boost.mk	2020-03-15 17:33:24.084387009 +0100
++++ custom/package/boost/boost.mk	2020-03-15 17:35:34.893626139 +0100
+@@ -48,7 +48,7 @@
+ BOOST_WITHOUT_FLAGS += $(if $(BR2_PACKAGE_BOOST_TYPE_ERASURE),,type_erasure)
+ BOOST_WITHOUT_FLAGS += $(if $(BR2_PACKAGE_BOOST_WAVE),,wave)
  
-+BOOST_CXXFLAGS=$(TARGET_CXXFLAGS) -std=c++11
-+
- # keep host variant as minimal as possible
- HOST_BOOST_FLAGS = --without-icu --with-toolset=gcc \
- 	--without-libraries=$(subst $(space),$(comma),atomic chrono context \
+-BOOST_TARGET_CXXFLAGS = $(TARGET_CXXFLAGS)
++BOOST_TARGET_CXXFLAGS = $(TARGET_CXXFLAGS) -std=c++11
+ 
+ BOOST_FLAGS = --with-toolset=gcc
+ 

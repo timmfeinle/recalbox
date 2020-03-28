@@ -1,12 +1,12 @@
-diff --git a/package/dhcpcd/dhcpcd.mk b/package/dhcpcd/dhcpcd.mk
-index dc5c69b86b..100ba67bca 100644
---- a/package/dhcpcd/dhcpcd.mk
-+++ b/package/dhcpcd/dhcpcd.mk
-@@ -38,7 +38,7 @@ endef
- 
+--- buildroot/package/dhcpcd/dhcpcd.mk	2020-01-29 11:12:25.999391349 +0100
++++ custom/package/dhcpcd/dhcpcd.mk	2020-03-15 17:59:18.218987450 +0100
+@@ -41,8 +41,8 @@
+ # don't want the init script or service file to be installed.
+ ifeq ($(BR2_PACKAGE_NETWORK_MANAGER),)
  define DHCPCD_INSTALL_INIT_SYSV
- 	$(INSTALL) -m 755 -D package/dhcpcd/S41dhcpcd \
+-	$(INSTALL) -m 755 -D package/dhcpcd/S41dhcpcd \
 -		$(TARGET_DIR)/etc/init.d/S41dhcpcd
++	$(INSTALL) -m 755 -D package/dhcpcd/S10dhcpcd \
 +		$(TARGET_DIR)/etc/init.d/S10dhcpcd
  endef
  
