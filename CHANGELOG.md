@@ -68,6 +68,7 @@ All notable changes to this project will be documented in this file.
 - Fix crash in empty bios checker list
 - Fix hidden screenshot system
 - Implement Pulseaudio
+- Add WebManager v3
 
 ## [7.1.1-Reloaded]
 - Fix abnormally long boots

@@ -62,6 +62,7 @@ Every case must be checked before a release.
 - [ ] DosBox Pure added => test this new core
 - [ ] BR2020.11 - Check PC Legacy boot works (GRUB loading... boot loop)
 - [ ] Pulseaudio - Check audio works everywhere
+- [ ] WebMAnager v3 => test all
 
 
 ## [7.1-Reloaded]

@@ -5,6 +5,7 @@
 ### News
 - Bump Buildroot to version 2020.02
 - Bump Kernel to 5.8 (except on Odroid Go Advance)
+- Add WebManager v3
 - New multi-source rom management:
   - Pre-installed games are no longer copied into SHARE partition (except ports)
   - New option in game menu to show/hide pre-installed games
