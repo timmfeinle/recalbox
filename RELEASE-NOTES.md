@@ -2,6 +2,8 @@
 
 ## Next
 
+- Add IPFS on Pi3, Pi4, XU4 and PC (disabled by default)
+
 ### News
 - Bump Buildroot to version 2020.02
 - Bump Kernel to 5.8 (except on Odroid Go Advance)
