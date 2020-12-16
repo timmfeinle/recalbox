@@ -39,6 +39,8 @@ else ifeq ($(BR2_ARM_CPU_ARMV6),y)
 GO_GOARM = 6
 else ifeq ($(BR2_ARM_CPU_ARMV7A),y)
 GO_GOARM = 7
+else ifeq ($(BR2_ARM_CPU_ARMV8A),y)
+GO_GOARM = 7 # Go doesn't support GOARM=8 yet (see https://github.com/golang/go/issues/29373)
 endif
 else ifeq ($(BR2_aarch64),y)
 GO_GOARCH = arm64

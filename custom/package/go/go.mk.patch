@@ -1,8 +1,17 @@
 diff --git package/go/go.mk package/go/go.mk
-index d2ab9b8..89315f3 100644
+index d2ab9b8..88f4fa5 100644
 --- package/go/go.mk
 +++ package/go/go.mk
-@@ -99,8 +99,8 @@ HOST_GO_HOST_ENV = \
+@@ -39,6 +39,8 @@ else ifeq ($(BR2_ARM_CPU_ARMV6),y)
+ GO_GOARM = 6
+ else ifeq ($(BR2_ARM_CPU_ARMV7A),y)
+ GO_GOARM = 7
++else ifeq ($(BR2_ARM_CPU_ARMV8A),y)
++GO_GOARM = 7 # Go doesn't support GOARM=8 yet (see https://github.com/golang/go/issues/29373)
+ endif
+ else ifeq ($(BR2_aarch64),y)
+ GO_GOARCH = arm64
+@@ -99,8 +101,8 @@ HOST_GO_HOST_ENV = \
  	$(HOST_GO_COMMON_ENV) \
  	GOARCH="" \
  	GOCACHE="$(HOST_GO_HOST_CACHE)" \
