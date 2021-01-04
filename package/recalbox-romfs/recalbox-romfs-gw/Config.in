@@ -1,6 +1,7 @@
 config BR2_PACKAGE_RECALBOX_ROMFS_GW
 	bool "recalbox-romfs-gw"
 	select BR2_PACKAGE_RECALBOX_ROMS
-	depends on BR2_PACKAGE_LIBRETRO_GW
+	depends on BR2_PACKAGE_LIBRETRO_GW \
+	  || BR2_PACKAGE_LIBRETRO_MESS
 	help
 	  share_init/roms and xml for gw

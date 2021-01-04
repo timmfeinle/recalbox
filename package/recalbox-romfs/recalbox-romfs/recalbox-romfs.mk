@@ -385,7 +385,7 @@ ifneq ($(BR2_PACKAGE_LIBRETRO_GAMBATTE)$(BR2_PACKAGE_LIBRETRO_TGBDUAL)$(BR2_PACK
 endif
 
 # System: gw
-ifneq ($(BR2_PACKAGE_LIBRETRO_GW),)
+ifneq ($(BR2_PACKAGE_LIBRETRO_GW),$(BR2_PACKAGE_LIBRETRO_MESS))
 	RECALBOX_ROMFS_DEPENDENCIES += recalbox-romfs-gw
 endif
 
@@ -752,6 +752,10 @@ endif
 # System: scv
 ifneq ($(BR2_PACKAGE_LIBRETRO_EMUSCV),)
     RECALBOX_ROMFS_DEPENDENCIES += recalbox-romfs-scv
+endif
+
+ifneq ($(BR2_PACKAGE_LIBRETRO_MESS),)
+    RECALBOX_ROMFS_DEPENDENCIES += recalbox-romfs-cdi
 endif
 
 $(eval $(generic-package))
